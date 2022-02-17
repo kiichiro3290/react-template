@@ -1,38 +1,37 @@
 import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import logo from '~/logo.svg'
+import { Button } from '~/components/button'
 
-function App() {
+const App: React.VFC = () => {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
+    <div className='text-center'>
+      <header className='bg-slate-700 min-h-screen flex flex-col align-center justify-center text-3xl text-white'>
+        <img src={logo} className='h-72' alt='logo' />
+        <p className='text-4xl'>Hello Vite + React!</p>
+        <p className='my-5'>
+          count is:
+          <Button
+            outlined
+            onClick={() => setCount((count) => count + 1)}
+          >
+            {count}
+          </Button>
         </p>
-        <p>
+        <p className='my-2'>
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <p className='my-2'>
+          <a className='text-cyan-300' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
             Learn React
           </a>
           {' | '}
           <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
+            className='text-cyan-300'
+            href='https://vitejs.dev/guide/features.html'
+            target='_blank'
+            rel='noopener noreferrer'
           >
             Vite Docs
           </a>
