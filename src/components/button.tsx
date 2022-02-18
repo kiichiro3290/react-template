@@ -15,7 +15,7 @@ export const Button: React.VFC<ButtonProps> = ({
   className,
   full = false,
   rounded = false,
-  outlined = false,
+  outlined = true,
 }) => {
   return (
     <button
