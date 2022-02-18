@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import logo from '~/logo.svg'
-import { Button } from '~/components/button'
+import { Button } from '~/components/common/button/button'
 
 const App: React.VFC = () => {
   const [count, setCount] = useState(0)
